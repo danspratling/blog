@@ -3,20 +3,13 @@ module.exports = {
     title: `Dan Spratling's Blog Site`,
     author: `Dan Spratling`,
     description: `A blog from the mind of Dan`,
-    siteUrl: `https://danspratling.co.uk`,
+    siteUrl: `https://danspratling.com`,
     social: {
       twitter: `spratters53`,
-      github: `spratters53`,
+      github: `danspratling`,
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
