@@ -15,13 +15,6 @@ import { rhythm } from "../utils/typography"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author
@@ -29,6 +22,15 @@ const Bio = () => {
       }
     }
   `)
+
+  //query
+  // avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+  //   childImageSharp {
+  //     fixed(width: 50, height: 50) {
+  //       ...GatsbyImageSharpFixed
+  //     }
+  //   }
+  // }
 
   const { author } = data.site.siteMetadata
 
@@ -39,7 +41,7 @@ const Bio = () => {
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
+      {/* <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         style={{
@@ -51,7 +53,7 @@ const Bio = () => {
         imgStyle={{
           borderRadius: "50%",
         }}
-      />
+      /> */}
       <p>
         <strong>{author}</strong> A Javascript Developer & Frontend Architect
         living and working in Bristol, UK.
