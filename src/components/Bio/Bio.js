@@ -7,10 +7,10 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import Socials from "./socials"
+// import Image from "gatsby-image"
+import { Socials } from "../../components"
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
