@@ -1,9 +1,8 @@
-export { default as Bio } from "./Bio"
-export { default as Col } from "./Col"
-export { default as Container } from "./Container"
-export { default as Hero } from "./Hero"
-export { default as Layout } from "./Layout"
-export { default as Row } from "./Row"
-export { default as SEO } from "./Seo"
-export { default as Socials } from "./Socials"
-export { default as Wave } from "./Wave"
+export { default as Bio } from './Bio'
+export { default as Col } from './Col'
+export { default as Container } from './Container'
+export { default as Hero } from './Hero'
+export { default as Layout } from './Layout'
+export { default as Row } from './Row'
+export { default as SEO } from './Seo'
+export { default as Socials } from './Socials'

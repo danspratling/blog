@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import { Layout, SEO, Hero, Bio, Wave } from '../components'
+import { Layout, SEO, Hero } from '../components'
 import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
@@ -14,8 +14,9 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Hero>Just another dev blog</Hero>
-        <Bio />
-        {/* <Wave /> */}
+        {/**
+        TODO: add page transitions for when a user opens a blog post. Should almost feel like a modal.
+        */}
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (

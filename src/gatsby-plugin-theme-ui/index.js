@@ -3,8 +3,9 @@ export default {
     text: '#141821',
     background: '#fff',
     accent: '#b9c8c5',
-    primary: '#133774',
-    secondary: '#ff6347',
+    primary: '#0aaec0',
+    secondary: '#961f93',
+    primaryGradient: '#0cdbf1',
   },
   fonts: {
     body: 'system-ui, sans-serif',

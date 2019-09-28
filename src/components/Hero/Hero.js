@@ -1,28 +1,71 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Container, Row, Col } from '../'
+import theme from '../../gatsby-plugin-theme-ui'
 
-const Hero = ({ children }) => (
-  <div
-    sx={{
-      display: 'flex',
-      alignItems: 'center',
-      color: 'background',
-      backgroundColor: 'primary',
-      padding: 4,
-      minHeight: '60vw',
-    }}
-  >
-    <Container>
-      <Row>
-        <Col>
-          <h1 sx={{ fontSize: 7, textAlign: 'center', mt: 3, mb: 3 }}>
-            {children}
-          </h1>
-        </Col>
-      </Row>
-    </Container>
-  </div>
-)
+const Hero = ({ children }) => {
+  const { colors } = theme
+  return (
+    <div
+      sx={{
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        pt: '160px',
+        px: 4,
+        pb: 4,
+        height: '60vw',
+        maxHeight: '420px',
+      }}
+    >
+      {/*
+        TODO: Animate the border of this box when the user first sees it
+      */}
+      <div
+        sx={{
+          padding: 4,
+          borderWidth: 6,
+          borderStyle: 'solid',
+          borderColor: 'secondary',
+          backgroundColor: 'background',
+        }}
+      >
+        <Container>
+          <Row>
+            <Col>
+              <h1 sx={{ fontSize: 7, textAlign: 'center', mt: 3, mb: 3 }}>
+                {children}
+              </h1>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: `${(2 / 3) * 100}%`,
+          backgroundColor: 'primary',
+          backgroundImage: `linear-gradient(to top, ${colors.primary}, ${colors.primaryGradient})`,
+          zIndex: -1,
+        }}
+      />
+      <div
+        sx={{
+          position: 'absolute',
+          top: `${(2 / 3) * 100}%`,
+          left: 0,
+          right: 0,
+          height: `${(1 / 3) * 100}%`,
+          backgroundColor: 'background',
+          zIndex: -1,
+        }}
+      />
+    </div>
+  )
+}
 
 export default Hero
