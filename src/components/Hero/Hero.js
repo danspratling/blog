@@ -47,20 +47,9 @@ const Hero = ({ children }) => {
           top: 0,
           left: 0,
           right: 0,
-          height: `${(2 / 3) * 100}%`,
+          height: `66.66%`,
           backgroundColor: 'primary',
           backgroundImage: `linear-gradient(to top, ${colors.primary}, ${colors.primaryGradient})`,
-          zIndex: -1,
-        }}
-      />
-      <div
-        sx={{
-          position: 'absolute',
-          top: `${(2 / 3) * 100}%`,
-          left: 0,
-          right: 0,
-          height: `${(1 / 3) * 100}%`,
-          backgroundColor: 'background',
           zIndex: -1,
         }}
       />

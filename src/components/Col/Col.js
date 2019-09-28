@@ -23,8 +23,6 @@ const Col = ({ xs, sm, md, lg, xl, children }, props) => {
     return `1 0 ${(colWidth / 12) * 100}%`
   }
 
-  console.log(props)
-
   return (
     <div
       sx={{

@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import { Layout, SEO, Bio } from "../components"
-import { rhythm, scale } from "../utils/typography"
+import { Layout, SEO } from '../components'
+import { rhythm, scale } from '../utils/typography'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -42,9 +42,6 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
-          <footer>
-            <Bio />
-          </footer>
         </article>
 
         <nav>
