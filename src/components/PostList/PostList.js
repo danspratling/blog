@@ -7,7 +7,7 @@ const PostList = ({ posts }) => {
     <Container>
       <Row>
         {posts.map(({ node }) => (
-          <Col md={6} lg={4}>
+          <Col lg={6}>
             <Post node={node} />
           </Col>
         ))}{' '}
