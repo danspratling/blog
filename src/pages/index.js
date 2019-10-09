@@ -11,7 +11,7 @@ class BlogIndex extends React.Component {
         location={this.props.location}
         title={data.site.siteMetadata.title}
       >
-        <SEO title="All posts" />
+        {/* <SEO title="All posts" /> */}
         <Hero>Just another dev blog</Hero>
         {/**
         TODO: add page transitions for when a user opens a blog post. Should almost feel like a modal.
