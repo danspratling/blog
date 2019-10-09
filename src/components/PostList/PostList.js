@@ -6,8 +6,8 @@ const PostList = ({ posts }) => {
   return (
     <Container>
       <Row>
-        {posts.map(({ node }) => (
-          <Col lg={6}>
+        {posts.map(({ node }, index) => (
+          <Col key={index} lg={6}>
             <Post node={node} />
           </Col>
         ))}{' '}
