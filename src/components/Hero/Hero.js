@@ -1,13 +1,26 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { useState, useEffect } from 'react'
+import { jsx, useThemeUI } from 'theme-ui'
+import { keyframes } from '@emotion/core'
 import { Container, Row, Col } from '..'
 import { HeroTitleSVG } from '.'
 
 const Hero = ({ children }) => {
-  const [pageLoaded, setPageLoaded] = useState(false)
+  const { theme } = useThemeUI()
 
-  useEffect(() => setPageLoaded(true), [])
+  const line = keyframes`
+    to {
+      stroke-dashoffset: 0
+    }
+  `
+
+  const fill = keyframes`
+    from {
+      fill: transparent
+    }
+    to {
+      fill: ${theme.colors.primary}
+    }
+  `
 
   const heroStyles = {
     position: 'relative',
@@ -23,9 +36,10 @@ const Hero = ({ children }) => {
 
   const pathStyles = {
     path: {
+      stroke: 'primary',
       strokeDasharray: 300,
-      strokeDashoffset: pageLoaded ? 0 : 300,
-      transition: '1.8s ease',
+      strokeDashoffset: 300,
+      animation: `${line} 2s ease forwards, ${fill} 0.5s ease forwards 2s`,
     },
   }
 

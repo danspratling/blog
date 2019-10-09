@@ -3,13 +3,13 @@ export default {
     text: '#141821',
     background: '#fff',
     accent: '#b9c8c5',
-    primary: '#0aaec0',
+    primary: '#191970', //midnight blue
     secondary: '#961f93',
     primaryGradient: '#0cdbf1',
   },
   fonts: {
     body: 'system-ui, sans-serif',
-    heading: 'system-ui, sans-serif',
+    heading: 'Montserrat',
     monospace: 'Menlo, monospace',
   },
   fontWeights: {
