@@ -1,28 +1,45 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
-import { Layout, SEO, Hero, PostList } from '../components'
+import { Layout, Hero, Container, Row, Col, Post } from '../components'
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
+const BlogList = ({ data }) => {
+  return (
+    <Layout
+    // location={this.props.location}
+    // title={data.site.siteMetadata.title}
+    >
+      {/* <SEO title="All posts" /> */}
+      <Hero></Hero>
 
-    return (
-      <Layout
-        location={this.props.location}
-        title={data.site.siteMetadata.title}
-      >
-        {/* <SEO title="All posts" /> */}
-        <Hero>Just another dev blog</Hero>
-        {/**
+      {/**
         TODO: add page transitions for when a user opens a blog post. Should almost feel like a modal.
         */}
-        <PostList posts={data.allMarkdownRemark.edges} />
-      </Layout>
-    )
-  }
+      <Container>
+        <Row sx={style.postList.row}>
+          {data.allMarkdownRemark.edges.map(({ node }, index) => (
+            <Col key={index} lg={9}>
+              <Post node={node} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </Layout>
+  )
 }
 
-export default BlogIndex
+export default BlogList
+
+const style = {
+  postList: {
+    row: {
+      position: 'relative',
+      marginTop: '-100px',
+      mx: 'auto',
+      justifyContent: 'center',
+    },
+  },
+}
 
 export const pageQuery = graphql`
   query {

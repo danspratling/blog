@@ -1,20 +1,21 @@
 /** @jsx jsx */
-// import React from "react"
 import { jsx } from 'theme-ui'
 
-const Row = ({ children }) => {
+const Row = ({ className, children }) => {
   return (
-    <div
-      sx={{
-        display: 'flex',
-        ml: theme => theme.space[3] * -1,
-        mr: theme => theme.space[3] * -1,
-        flexWrap: 'wrap',
-      }}
-    >
+    <div className={className} sx={style.row}>
       {children}
     </div>
   )
 }
 
 export default Row
+
+const style = {
+  row: {
+    display: 'flex',
+    ml: theme => theme.space[3] * -1,
+    mr: theme => theme.space[3] * -1,
+    flexWrap: 'wrap',
+  },
+}

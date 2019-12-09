@@ -3,68 +3,46 @@ import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
 
 const Post = ({ node }) => {
-  const randNum = (min, max) => Math.floor(Math.random() * (max - min)) + min
-
-  const generateGradient = () => {
-    const hue = randNum(0, 255)
-    const sat = randNum(75, 100)
-    const lit = 75
-
-    return `linear-gradient(to right,
-      hsl(
-        ${hue - 15},
-        ${sat}%,
-        ${lit}%
-      ),
-      hsl(
-        ${hue + 15},
-        ${sat}%,
-        ${lit}%
-      ))`
-  }
-
   return (
-    <article
-      key={node.fields.slug}
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        borderRadius: 5,
-        backgroundImage: generateGradient(),
-        border: '5px solid #ffffff',
-        mb: 3,
-        transition: '0.3s ease',
-        ':hover, :focus, :active': {
-          mt: -10,
-        },
-      }}
-    >
-      <Link
-        to={node.fields.slug}
-        sx={{
-          variant: 'links.primary',
-          padding: 4,
-          boxShadow: `none`,
-        }}
-      >
-        <header>
-          <h3 sx={{ my: 2 }}>{node.frontmatter.title || node.fields.slug}</h3>
-          <small>{node.frontmatter.date}</small>
-        </header>
-        <section>
-          <p
-            sx={{
-              mb: 0,
-            }}
-            dangerouslySetInnerHTML={{
-              __html: node.frontmatter.description || node.excerpt,
-            }}
-          />
-        </section>
+    <article key={node.fields.slug} sx={style.article}>
+      <Link to={node.fields.slug} sx={style.link}>
+        <h3 sx={style.header}>{node.frontmatter.title || node.fields.slug}</h3>
+        <small>{node.frontmatter.date}</small>
+        <p
+          sx={style.excerpt}
+          dangerouslySetInnerHTML={{
+            __html: node.frontmatter.description || node.excerpt,
+          }}
+        />
       </Link>
     </article>
   )
 }
 
 export default Post
+
+const style = {
+  article: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    borderRadius: '1',
+    border: '2px solid',
+    borderColor: 'gray.0',
+    boxShadow: 'md',
+    mb: 3,
+    transition: '0.3s ease',
+    // ':hover, :focus, :active': {},
+  },
+  link: {
+    color: 'primary',
+    padding: 4,
+  },
+  header: {
+    my: 2,
+  },
+  excerpt: {
+    mb: 0,
+  },
+}

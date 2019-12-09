@@ -2,7 +2,7 @@
 // import React from "react"
 import { jsx } from 'theme-ui'
 
-const Col = ({ xs, sm, md, lg, xl, children }, props) => {
+const Col = ({ xs, sm, md, lg, xl, className, children }, props) => {
   const calcWidth = colWidth => {
     if (colWidth === undefined) {
       return null
@@ -25,6 +25,7 @@ const Col = ({ xs, sm, md, lg, xl, children }, props) => {
 
   return (
     <div
+      className={className}
       sx={{
         pl: 3,
         pr: 3,

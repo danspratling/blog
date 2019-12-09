@@ -6,7 +6,27 @@ import { HeroTitleSVG } from '.'
 
 const Hero = ({ children }) => {
   const { theme } = useThemeUI()
+  const style = useStyle(theme)
 
+  console.log(style)
+
+  return (
+    <div sx={style.hero}>
+      <Container>
+        <Row>
+          <Col sx={{ textAlign: 'center' }}>
+            <HeroTitleSVG sx={style.svg} />
+            <h2>Follow my journey as we learn new Frontend techniques.</h2>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  )
+}
+
+export default Hero
+
+const useStyle = theme => {
   const line = keyframes`
     to {
       stroke-dashoffset: 0
@@ -18,42 +38,31 @@ const Hero = ({ children }) => {
       fill: transparent
     }
     to {
-      fill: ${theme.colors.primary}
+      fill: ${theme.colors.white}
     }
   `
 
-  const heroStyles = {
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    pt: '160px',
-    px: 4,
-    pb: 4,
-    height: '60vw',
-    maxHeight: '420px',
-  }
-
-  const pathStyles = {
-    path: {
-      stroke: 'primary',
+  return {
+    hero: {
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      pt: '160px',
+      pb: '160px',
+      px: 4,
+      height: '68vh',
+      maxHeight: '800px',
+      color: 'white',
+      backgroundColor: 'primary',
+      backgroundImage: theme =>
+        `linear-gradient(to bottom left, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`,
+    },
+    svg: {
+      stroke: 'white',
       strokeDasharray: 300,
       strokeDashoffset: 300,
       animation: `${line} 2s ease forwards, ${fill} 0.5s ease forwards 2s`,
     },
   }
-
-  return (
-    <div sx={heroStyles}>
-      <Container>
-        <Row>
-          <Col>
-            <HeroTitleSVG sx={pathStyles} />
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  )
 }
-
-export default Hero
