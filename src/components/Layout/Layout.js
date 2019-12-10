@@ -57,13 +57,19 @@ const Layout = ({ children }) => {
       />
       <header>{/*Some nav here*/}</header>
       <main>{children}</main>
-      <footer sx={{ mt: 4 }}>
+      <footer sx={{ py: 2, mt: 4, bg: 'tertiary', color: 'white' }}>
         <Container>
           <Row>
             <Col sx={{ textAlign: 'center' }}>
               © {new Date().getFullYear()}, Built with
               {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
+              <a
+                href="https://www.gatsbyjs.org"
+                target="_blank"
+                sx={{ color: 'white' }}
+              >
+                Gatsby
+              </a>
             </Col>
           </Row>
         </Container>

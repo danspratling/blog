@@ -18,6 +18,7 @@ export default {
     ],
     primary: '#ed3ab6', //pink
     secondary: '#fce69c', //yellow
+    tertiary: '#58355E', //slate gray
   },
   fonts: {
     body: 'system-ui, sans-serif',
