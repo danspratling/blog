@@ -14,7 +14,9 @@ const Hero = ({ children }) => {
         <Row>
           <Col sx={{ textAlign: 'center' }}>
             <HeroTitleSVG sx={style.svg} />
-            <h2>Follow my journey as we learn new Frontend techniques.</h2>
+            <h2 sx={{ fontWeight: 'normal' }}>
+              Follow my journey as we learn new Frontend techniques.
+            </h2>
           </Col>
         </Row>
       </Container>

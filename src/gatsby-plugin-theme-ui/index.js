@@ -1,9 +1,9 @@
 export default {
   colors: {
-    text: '#141821',
+    text: '#2d3748',
     background: '#fff',
     transparent: 'transparent',
-    black: '#000',
+    black: '#1a202c',
     white: '#fff',
     gray: [
       '#f7fafc',
@@ -26,7 +26,7 @@ export default {
   },
   fontWeights: {
     body: 400,
-    heading: 400,
+    heading: 700,
     bold: 700,
   },
   lineHeights: {

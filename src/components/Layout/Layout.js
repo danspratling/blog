@@ -18,10 +18,11 @@ const Layout = ({ children }) => {
             letterSpacing: '.5px',
             margin: 0,
             minHeight: '100vh',
+            color: theme.colors.text,
           },
           'h1, h2, h3, h4, h5, h6': {
             fontFamily: theme.fonts.heading,
-            fontWeight: theme.fontWeights.heading,
+            // fontWeight: theme.fontWeights.heading,
             lineHeight: theme.lineHeights.heading,
           },
           h1: {

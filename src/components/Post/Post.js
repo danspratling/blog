@@ -46,9 +46,11 @@ const style = {
     textDecoration: 'none',
   },
   header: {
+    fontWeight: 'bold',
     my: 2,
   },
   excerpt: {
+    color: 'text',
     mb: 0,
   },
 }
