@@ -1,81 +1,105 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { Link, graphql } from 'gatsby'
+import { Layout, Container, Row, Col } from '../components'
 
-import { Layout, SEO } from '../components'
-import { rhythm, scale } from '../utils/typography'
+const BlogPost = ({ data, pageContext }) => {
+  const post = data.markdownRemark
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+  return (
+    <Layout>
+      <div
+        sx={{
+          ...style.background,
+          backgroundImage: theme =>
+            `linear-gradient(to bottom left, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`,
+        }}
+      />
+      <Container>
+        <Row sx={{ justifyContent: 'center' }}>
+          <Col md={10} sx={style.wrapper}>
+            <header sx={{ marginBottom: 5 }}>
+              <h1 sx={style.title}>{post.frontmatter.title}</h1>
+              <p sx={style.date}>{post.frontmatter.date}</p>
+            </header>
+            <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          </Col>
+        </Row>
+      </Container>
+      {/* <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      /> */}
+      {/* <article></article>
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
-        <article>
-          <header>
-            <h1
-              style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
-              }}
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
-            style={{
-              marginBottom: rhythm(1),
-            }}
-          />
-        </article>
-
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
-      </Layout>
-    )
-  }
+      <nav>
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </nav> */}
+    </Layout>
+  )
 }
+// class BlogPostTemplate extends React.Component {
+//   render() {
+//     const post = this.props.data.markdownRemark
+//     const siteTitle = this.props.data.site.siteMetadata.title
+//     // const { previous, next } = this.props.pageContext
+//   }
+// }
 
-export default BlogPostTemplate
+export default BlogPost
+
+const style = {
+  background: {
+    position: 'absolute',
+    width: '100%',
+    zIndex: -1,
+    height: '68vh',
+    maxHeight: '800px',
+    minHeight: '520px',
+    backgroundColor: 'primary',
+  },
+  wrapper: {
+    px: 6,
+    py: 5,
+    backgroundColor: 'white',
+    marginTop: 6,
+    borderRadius: 1,
+  },
+  title: {
+    fontFamily: 'heading',
+    fontWeight: 'bold',
+    color: 'primary',
+    textAlign: 'center',
+    mb: 1,
+  },
+  date: {
+    fontSize: 2,
+    textAlign: 'center',
+  },
+}
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

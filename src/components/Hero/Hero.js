@@ -8,8 +8,6 @@ const Hero = ({ children }) => {
   const { theme } = useThemeUI()
   const style = useStyle(theme)
 
-  console.log(style)
-
   return (
     <div sx={style.hero}>
       <Container>
