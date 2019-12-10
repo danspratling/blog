@@ -33,11 +33,17 @@ const style = {
     boxShadow: 'md',
     mb: 3,
     transition: '0.3s ease',
-    // ':hover, :focus, :active': {},
+    ':hover, :focus': {
+      boxShadow: 'sm',
+      borderColor: 'primary',
+      ml: -2,
+      mr: 2,
+    },
   },
   link: {
     color: 'primary',
     padding: 4,
+    textDecoration: 'none',
   },
   header: {
     my: 2,

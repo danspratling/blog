@@ -53,6 +53,7 @@ const useStyle = theme => {
       px: 4,
       height: '68vh',
       maxHeight: '800px',
+      minHeight: '520px',
       color: 'white',
       backgroundColor: 'primary',
       backgroundImage: theme =>
