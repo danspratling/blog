@@ -12,7 +12,7 @@ const BlogPost = ({ data, pageContext }) => {
         sx={{
           ...style.background,
           backgroundImage: theme =>
-            `linear-gradient(to bottom left, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`,
+            `linear-gradient(to bottom left, ${theme.colors.pink} 0%, ${theme.colors.yellow} 100%)`,
         }}
       />
       <Container>
@@ -84,7 +84,7 @@ const style = {
   wrapper: {
     px: 6,
     py: 5,
-    backgroundColor: 'white',
+    backgroundColor: 'background',
     marginTop: 6,
     borderRadius: 1,
   },
