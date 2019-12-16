@@ -1,5 +1,6 @@
 export { default as Col } from './Col'
 export { default as Container } from './Container'
+export { default as DarkButton } from './DarkButton'
 export { default as Hero } from './Hero'
 export { default as Layout } from './Layout'
 export { default as Post } from './Post'

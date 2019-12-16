@@ -1,5 +1,9 @@
 export default {
+  initialColorMode: 'light',
   colors: {
+    primary: '#ed3ab6', //pink
+    secondary: '#fce69c', //yellow
+    accent: '#f7fafc', //light grey
     text: '#2d3748',
     background: '#fff',
     transparent: 'transparent',
@@ -16,8 +20,16 @@ export default {
       '#2d3748',
       '#1a202c',
     ],
-    primary: '#ed3ab6', //pink
-    secondary: '#fce69c', //yellow
+    pink: '#ed3ab6',
+    yellow: '#fce69c',
+    modes: {
+      dark: {
+        primary: '#fff',
+        text: '#fff',
+        background: '#351529', //dark pink
+        accent: '#ed3ab6',
+      },
+    },
   },
   fonts: {
     body: 'system-ui, sans-serif',
@@ -48,5 +60,4 @@ export default {
     xl: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
     none: 0,
   },
-  // modes: { dark: {} },
 }

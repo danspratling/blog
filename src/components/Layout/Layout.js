@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import { Global } from '@emotion/core'
 import { Fragment } from 'react'
-import { Container, Row, Col } from '..'
+import { Container, Row, Col, DarkButton } from '..'
 
 const Layout = ({ children }) => {
   return (
@@ -19,6 +19,7 @@ const Layout = ({ children }) => {
             margin: 0,
             minHeight: '100vh',
             color: theme.colors.text,
+            backgroundColor: theme.colors.background,
           },
           'h1, h2, h3, h4, h5, h6': {
             fontFamily: theme.fonts.heading,
@@ -45,6 +46,7 @@ const Layout = ({ children }) => {
             display: 'block',
           },
           a: {
+            color: theme.colors.primary,
             boxShadow: 'none',
           },
           'article > * + *': {
@@ -55,8 +57,13 @@ const Layout = ({ children }) => {
           },
         })}
       />
-      <header>{/*Some nav here*/}</header>
+
+      <header>
+        <DarkButton />
+      </header>
+
       <main>{children}</main>
+
       <footer sx={{ mt: 4 }}>
         <Container>
           <Row>
