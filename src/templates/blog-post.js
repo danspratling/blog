@@ -17,7 +17,7 @@ const BlogPost = ({ data, pageContext }) => {
       />
       <Container>
         <Row sx={{ justifyContent: 'center' }}>
-          <Col md={10} sx={style.wrapper}>
+          <Col xs={12} lg={10} sx={style.wrapper}>
             <header sx={{ marginBottom: 5 }}>
               <h1 sx={style.title}>{post.frontmatter.title}</h1>
               <p sx={style.date}>{post.frontmatter.date}</p>
@@ -82,8 +82,8 @@ const style = {
     backgroundColor: 'primary',
   },
   wrapper: {
-    px: 6,
-    py: 5,
+    px: [4, , 5, 6],
+    py: [4, , , 5],
     backgroundColor: 'background',
     marginTop: 6,
     borderRadius: 1,

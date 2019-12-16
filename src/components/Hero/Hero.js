@@ -12,9 +12,13 @@ const Hero = ({ children }) => {
     <div sx={style.hero}>
       <Container>
         <Row>
-          <Col sx={{ textAlign: 'center' }}>
+          <Col
+            sx={{
+              textAlign: 'center',
+            }}
+          >
             <HeroTitleSVG sx={style.svg} />
-            <h2 sx={{ fontWeight: 'normal' }}>
+            <h2 sx={style.subheading}>
               Follow my journey as we learn new Frontend techniques.
             </h2>
           </Col>
@@ -58,12 +62,20 @@ const useStyle = theme => {
       backgroundColor: 'primary',
       backgroundImage: theme =>
         `linear-gradient(to bottom left, ${theme.colors.pink} 0%, ${theme.colors.yellow} 100%)`,
+      overflow: 'hidden',
     },
     svg: {
-      stroke: 'white',
-      strokeDasharray: 300,
-      strokeDashoffset: 300,
-      animation: `${line} 2s ease forwards, ${fill} 0.5s ease forwards 2s`,
+      maxWidth: '100%',
+      path: {
+        stroke: 'white',
+        strokeDasharray: 300,
+        strokeDashoffset: 300,
+        animation: `${line} 2s ease forwards, ${fill} 0.5s ease forwards 2s`,
+      },
+    },
+    subheading: {
+      fontSize: [4, , , 5],
+      fontWeight: 'normal',
     },
   }
 }
