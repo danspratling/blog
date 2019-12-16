@@ -3,13 +3,14 @@ title: Creating a Dark Mode
 date: 2019-12-11T15:25:25.563Z
 description: How to create a dark theme
 ---
+
 Dark themes have been surging in popularity recently. For developers, they've existed for years as they tend to be standard with code editors but they've been spreading to other apps. Youtube and Twitter notably have a dark mode which is extremely popular but lots of other apps exist which use them and they're spreading to websites too.
 
 Dark modes can provide a number of benefits for users, like reducing eye strain, increasing contrast for people with difficulty seeing.
 
 _So let's get started._
 
-__
+\_\_
 
 ## Setup
 
@@ -23,22 +24,22 @@ The general approach manages the dark mode state and attaches a class to the `<b
 
 First run
 
-```shell
+```shF
 yarn add use-dark-mode
 ```
 
 use-dark-mode takes an initial state and an optional config object. The config below are the defaults so don't need to be included but if you wish to change them you can do so.
 
-```javascript
+```js
 const darkMode = useDarkMode(
   false, //initial state - if dark mode should be enabled by default
   {
-    classNameDark: "dark-mode",
-    classNameLight: "light-mode",
-    storageKey: "darkMode", //the key used in localstorage
+    classNameDark: 'dark-mode',
+    classNameLight: 'light-mode',
+    storageKey: 'darkMode', //the key used in localstorage
     minify: true,
   }
-);
+)
 ```
 
 Next we need to set up our css. I'm assuming we already have the default styling down for the site so we just need to handle the dark mode css.
@@ -56,7 +57,7 @@ Though it's likely you will need to adjust various components, either by adding 
 
 Finally, we need to create a toggle button. I'm adding mine to layout.js so that it appears on every page
 
-```javascript
+```js
 // Layout.js
 
 // at the top with the imports
@@ -69,7 +70,7 @@ const darkMode = useDarkMode(false) //see above for config options
 <button onClick={() => darkMode.toggle()}>Dark mode</button> //if you want to have 2 buttons then use darkMode.enable() and darkMode.disable()
 ```
 
-We're finished - kinda. If you're using css, sass or less then you're done. You can test this by opening up the inspector and looking at the body class. 
+We're finished - kinda. If you're using css, sass or less then you're done. You can test this by opening up the inspector and looking at the body class.
 
 That was pretty easy, right? But that doesn't cover all ways to use css, so let's keep going.
 
@@ -79,7 +80,7 @@ CSS-in-JS is a bit more complex if working from scratch but this also gives you 
 
 How this works changes a little between different tools but the general approach is to have something like the following
 
-```javascript
+```js
 // App.js
 import useDarkMode from 'use-dark-mode'
 import {lightTheme, darkTheme} from './theme //your two theme.js files which would be exported from a theme/index.js file
@@ -109,14 +110,15 @@ This new plugin does all the CSS-in-JS for us so it adds the correct theme to Th
 
 We first need to add the config options. As it's now handled by a gatsby plugin, these need to go into gatsby-config.js
 
-```javascript
+```js
 // gatsby-config.js
 
 module.exports = {
   plugins: [
     {
       resolve: 'gatsby-plugin-use-dark-mode',
-      options: { //these options are all optional still and can be excluded
+      options: {
+        //these options are all optional still and can be excluded
         classNameDark: 'dark-mode',
         classNameLight: 'light-mode',
         storageKey: 'darkMode',
@@ -124,7 +126,7 @@ module.exports = {
       },
     },
   ],
-};
+}
 ```
 
 From here, the instructions are the same depending on if you're using CSS-in-JS or just a css approach.
@@ -137,7 +139,7 @@ _If you're taking this approach i'm assuming you have a Gatsby project set up wi
 
 First we want to set up our theme colours. We need to add an intialColorMode property so that Theme UI knows where we're starting from and then any additional modes we want need to be placed inside the colors object.
 
-```javascript
+```js
 // theme.js
 
 export default {
@@ -156,7 +158,7 @@ export default {
 
 Then, simiarly to how we created the button before we want to create a new button which references the useColorMode hook.
 
-```javascript
+```js
 // Layout.js
 
 // at the top with the imports
@@ -169,7 +171,7 @@ const [colorMode, setColorMode] = useColorMode()
 <button onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>Dark mode</button>
 ```
 
-These two methods are very similar but slightly different. 
+These two methods are very similar but slightly different.
 
 ### Cleanup
 
