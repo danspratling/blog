@@ -57,7 +57,7 @@ const useStyle = theme => {
       color: 'white',
       backgroundColor: 'primary',
       backgroundImage: theme =>
-        `linear-gradient(to bottom left, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%)`,
+        `linear-gradient(to bottom left, ${theme.colors.pink} 0%, ${theme.colors.yellow} 100%)`,
     },
     svg: {
       stroke: 'white',
