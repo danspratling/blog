@@ -8,7 +8,12 @@ const Container = ({ sx, className, children }) => {
       sx={{
         ml: 'auto',
         mr: 'auto',
-        maxWidth: theme => theme.breakpoints,
+        maxWidth: theme => [
+          '100vw',
+          ,
+          theme.breakpoints[3],
+          theme.breakpoints[4],
+        ],
         pl: 3,
         pr: 3,
       }}
