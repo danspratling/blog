@@ -1,7 +1,7 @@
 ---
-title: Creating a Dark Mode
+title: Creating a user controllable Dark Theme
 date: 2019-12-11T15:25:25.563Z
-description: How to create a dark theme
+description: How to create a dark theme on your react website which the user can control
 ---
 
 Dark themes have been surging in popularity recently. For developers, they've existed for years as they tend to be standard with code editors but they've been spreading to other apps. Youtube and Twitter notably have a dark mode which is extremely popular but lots of other apps exist which use them and they're spreading to websites too.
@@ -24,7 +24,7 @@ The general approach manages the dark mode state and attaches a class to the `<b
 
 First run
 
-```shF
+```sh
 yarn add use-dark-mode
 ```
 
@@ -179,7 +179,8 @@ You'll likely find that once you've gotten it working there'll be a few bugs to 
 
 #### Project
 
-(Check back later)
+This site! Check the top right corner or see the github page
+https://github.com/danspratling/blog
 
 #### References
 
