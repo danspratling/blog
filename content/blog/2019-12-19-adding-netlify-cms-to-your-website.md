@@ -9,6 +9,8 @@ Netlify CMS is a tool designed by the team at Netlify to handle your content. It
 
 You can demo the netlify CMS to see if it is right for you by [going to their demo site](https://cms.netlify.com/#/collections/posts).
 
+
+
 ## Installing Netlify CMS
 
 I'm using gatsby so this guide will go through the setup instructions assume that we're using that. However Netlify CMS can be used across a whole host of site types so [find the instructions which suit you on their site](https://www.netlifycms.org/docs/start-with-a-template/).
@@ -55,8 +57,14 @@ collections:
 
 [Full instructions for setting up a gatsby site and adding netlify cms](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/)
 
+
+
 ## Adding draft post functionality
 
+
+
 ## Adding page types
+
+
 
 ## Adding field types
