@@ -43,8 +43,7 @@ public_folder: assets
 collections:\
     name: blog\
     label: Blog\
-    folder: blog     create: true
-    fields:\
+    folder: blog     create: true     fields:\
         { name: path, label: Path }\
         { name: date, label: Date, widget: datetime }\
         { name: title, label: Title }\
