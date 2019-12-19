@@ -20,38 +20,38 @@ If you're starting from nothing, then there's a [prebuilt template you can use](
 If you want to do it yourself, there are a few options [which can be found on netlify's site](https://www.netlifycms.org/docs/add-to-your-site/). 
 
 We're going to be adding it to Gatsby. To do this we only need to do 2 things.\
-\
-\`\``sh
 
+```sh
 yarn add gatsby-plugin-netlify-cms
-
-\`\``
+```
 
 This will add netlify cms to your site. Then all we need to do is create a blog.
 
-Create a new file called config.yml at \`/static/admin/config.yml\`. This will hold all the details we want our CMS to use.
+Create a new file called config.yml at `/static/admin/config.yml`. This will hold all the details we want our CMS to use.
 
 Add this to the new file to create a blog and a media folder
 
-\`\``yml
+```yml
+backend:   
+  name: git-gateway
+  branch: master
 
-backend: \
-    name: test-repo\
-media_folder: static/assets \
+media_folder: static/assets
 public_folder: assets
 
-collections:\
-    name: blog\
-    label: Blog\
-    folder: blog     create: true     fields:\
-        { name: path, label: Path }\
-        { name: date, label: Date, widget: datetime }\
-        { name: title, label: Title }\
-        { name: body, label: Body, widget: markdown }
+collections:
+  - name: blog
+    label: Blog
+    folder: blog     
+    create: true     
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+```
 
-\`\``
-
-Now just run \`gatsby develop\` in the terminal to kick the CMS into action. You can visit the cms by going to \`localhost:8000/admin/\` - note that you will need the trailing / in the url. Forgetting that will cause an error.
+  Now just run `gatsby develop` in the terminal to kick the CMS into action. You can visit the cms by going to `localhost:8000/admin/` - note that you will need the trailing / in the url. Forgetting it will cause an error.
 
 [Full instructions for setting up a gatsby site and adding netlify cms](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/)
 
