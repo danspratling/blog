@@ -43,8 +43,7 @@ public_folder: assets
 collections:\
     name: blog\
     label: Blog\
-    folder: blog
-    create: true
+    folder: blog     create: true
     fields:\
         { name: path, label: Path }\
         { name: date, label: Date, widget: datetime }\
@@ -56,8 +55,6 @@ collections:\
 Now just run \`gatsby develop\` in the terminal to kick the CMS into action. You can visit the cms by going to \`localhost:8000/admin/\` - note that you will need the trailing / in the url. Forgetting that will cause an error.
 
 [Full instructions for setting up a gatsby site and adding netlify cms](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/)
-
-
 
 ## Adding draft post functionality
 
