@@ -65,10 +65,13 @@ To do that, we only need to make one small change to our `config.yml`.
 publish_mode: editorial_workflow
 ```
 
+Adding this will enable the editorial workflow which gives you draft, review and ready modes, all you (or a team) should need to be able to pump out new articles.
+
 ## Adding page types
 
 ## Adding field types
 
 ## Wrapping up
+
 
 
