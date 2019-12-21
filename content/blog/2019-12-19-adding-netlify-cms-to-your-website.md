@@ -57,6 +57,18 @@ Now just run `gatsby develop` in the terminal to kick the CMS into action. You c
 
 ## Adding draft post functionality
 
+In most cases you'll want to be able to save posts as a draft before having to publish them.
+
+To do that, we only need to make one small change to our `config.yml`.
+
+```yml
+publish_mode: editorial_workflow
+```
+
 ## Adding page types
 
 ## Adding field types
+
+## Wrapping up
+
+
