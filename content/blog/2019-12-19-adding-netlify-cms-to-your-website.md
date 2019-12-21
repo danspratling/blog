@@ -67,7 +67,15 @@ publish_mode: editorial_workflow
 
 Adding this will enable the editorial workflow which gives you draft, review and ready modes, all you (or a team) should need to be able to pump out new articles.
 
-## Adding page types
+## Adding page types (collections)
+
+Netlify CMS is perfect for blogging with its simple interface and workflow but it can be expanded further if you desire. By adding extra collections (essentially page types or doctypes, however you've heard it called before) we can add in new functionality keeping things like blogs, pages, faqs and whatever else you might need to use separate.
+
+We've already created the 'blog' collection to handle our blog posts but we can create a new one to handle our pages if we want.
+
+```yml
+
+
 
 ## Adding field types
 
