@@ -74,12 +74,29 @@ Netlify CMS is perfect for blogging with its simple interface and workflow but i
 We've already created the 'blog' collection to handle our blog posts but we can create a new one to handle our pages if we want.
 
 ```yml
+collections:
+    ....
 
+  - name: page
+    label: Pages
+    folder: page
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+```
 
+This will add a new collection type called "Pages", so now we have "blog" and "pages". Nice!
 
 ## Adding field types
 
+If you find that these aren't quite satisfying your needs, we can add extra fields. This might be useful for additional content. SEO is a good example where you may want different content in your SEO description than you have in your body.
+
+Extra fields can be added like so
+
+
 ## Wrapping up
-
-
-
+```
