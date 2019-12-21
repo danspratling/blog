@@ -93,10 +93,68 @@ This will add a new collection type called "Pages", so now we have "blog" and "p
 
 ## Adding field types
 
-If you find that these aren't quite satisfying your needs, we can add extra fields. This might be useful for additional content. SEO is a good example where you may want different content in your SEO description than you have in your body.
+If you find that these aren't quite satisfying your needs, we can add extra fields. This might be useful for additional content. A good example for blogging is featured images. A lot of blog designs expect a featured image, which is a good example of an additional field we could use.
 
-Extra fields can be added like so
+Extra fields can be added like so - see featured image below. This can be done for as many fields as you would like.
 
+```yml
+collections:
+  - name: blog
+    label: Blog
+    folder: blog     
+    create: true     
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: featured image, label: Featured Image, widget: image }
+      - { name: body, label: Body, widget: markdown }
+```
+
+[Full documentation on collections and field types can be found on the Netlify CMS site.](https://www.netlifycms.org/docs/collection-types/)
 
 ## Wrapping up
+
+Netlify CMS looks like a simple blogging CMS but can be utilised to great effect. We have created multiple page types with as many fields as we'd like.
+
+The final `config.yml` file looks like this.
+
+```yml
+backend:   
+  name: git-gateway
+  branch: master
+
+media_folder: static/assets
+public_folder: assets
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: blog
+    label: Blog
+    folder: blog     
+    create: true     
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: featured image, label: Featured Image, widget: image }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: page
+    label: Pages
+    folder: page
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
 ```
+
+[You can see the setup for this blog on my github page](https://github.com/danspratling/blog)
+
+
+
+[Netlify CMS documentation](https://www.netlifycms.org/docs/intro/)
