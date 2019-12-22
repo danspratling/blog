@@ -5,17 +5,15 @@ description: >-
   Netlify CMS is a great tool for adding simple content to your site, and this
   is how to set it up
 ---
-Netlify CMS is a tool designed by the team at Netlify to handle your content. Its beauty is that everything is handled via your repo, and you don't need to think about a backend as it's handled entirely by Netlify CMS inside markdown files. I'm currently using it in it's most minimal form for my blog (this one) but want to expand my workflow, so we'll be working out how to add draft posts, additional fields and extra pages to the site so we can create something a bit more complex than just a blog if we want to.
+Netlify CMS is a tool designed by the team at Netlify to handle your content. Its beauty is that everything is handled via your repo, and you don't need to think about a database as your posts are stored as markdown files. I'm currently using it in it's most minimal form but want to expand my workflow, so we'll be working out how to add draft posts, additional fields and extra pages to the site so we can create something a bit more complex than just a blog if we want to.
 
-You can demo the netlify CMS to see if it is right for you by [going to their demo site](https://cms.netlify.com/#/collections/posts).
+You can demo the Netlify CMS to see if it is right for you by [going to their demo site](https://cms.netlify.com/#/collections/posts).
 
 ## Installing Netlify CMS
 
-I'm using gatsby so this guide will go through the setup instructions assume that we're using that. However Netlify CMS can be used across a whole host of site types so [find the instructions which suit you on their site](https://www.netlifycms.org/docs/start-with-a-template/).
+I'm using Gatsby so this guide will go through the setup instructions assume that we're using that. However Netlify CMS can be used across a whole host of site types so [find the instructions which suit you on their site](https://www.netlifycms.org/docs/start-with-a-template/).
 
-For a Gatsby site, adding netlify cms is pretty simple.
-
-If you're starting from nothing, then there's a [prebuilt template you can use](https://www.netlifycms.org/docs/start-with-a-template/) which will setup a new site for you hosted on netlify.
+If you're starting from nothing, then there's a [prebuilt template you can use](https://www.netlifycms.org/docs/start-with-a-template/) which will setup a new site for you hosted on Netlify. Setting up a Gatsby site with Netlify CMS this way is as simple as a few clicks.
 
 If you want to do it yourself, there are a few options [which can be found on netlify's site](https://www.netlifycms.org/docs/add-to-your-site/). 
 
@@ -25,7 +23,7 @@ We're going to be adding it to Gatsby. To do this we only need to do 2 things.
 yarn add gatsby-plugin-netlify-cms
 ```
 
-This will add netlify cms to your site. Then all we need to do is create a blog.
+This will add Netlify CMS to your site. Then all we need to do is create a blog.
 
 Create a new file called config.yml at */static/admin/config.yml*. This will hold all the details we want our CMS to use.
 
@@ -71,7 +69,7 @@ Adding this will enable the editorial workflow which gives you draft, review and
 
 Netlify CMS is perfect for blogging with its simple interface and workflow but it can be expanded further if you desire. By adding extra collections (essentially page types or doctypes, however you've heard it called before) we can add in new functionality keeping things like blogs, pages, faqs and whatever else you might need to use separate.
 
-We've already created the 'blog' collection to handle our blog posts but we can create a new one to handle our pages if we want.
+We've already created the 'Blog' collection to handle our blog posts but we can create a new one to handle our pages if we want.
 
 ```yml
 collections:
@@ -89,7 +87,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
 ```
 
-This will add a new collection type called "Pages", so now we have "blog" and "pages". Nice!
+This will add a new collection type called 'Pages' so now we have 'Blog' and 'Pages'. Nice!
 
 ## Adding field types
 
