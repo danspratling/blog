@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import { Global } from '@emotion/core'
 import { Fragment } from 'react'
-import { Container, Row, Col, DarkButton } from '..'
+import { Container, Row, Col, Header } from '..'
 
 const Layout = ({ children }) => {
   return (
@@ -58,9 +58,7 @@ const Layout = ({ children }) => {
         })}
       />
 
-      <header>
-        <DarkButton />
-      </header>
+      <Header />
 
       <main>{children}</main>
 
