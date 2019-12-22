@@ -155,6 +155,4 @@ collections:
 
 [You can see the setup for this blog on my github page](https://github.com/danspratling/blog)
 
-
-
 [Netlify CMS documentation](https://www.netlifycms.org/docs/intro/)
