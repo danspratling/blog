@@ -8,7 +8,7 @@ import { DarkButton } from '..'
 const Header = () => {
   return (
     <header>
-      {window.location.pathname !== '/' ? (
+      {typeof window !== 'undefined' && window.location.pathname !== '/' ? (
         <Link to="/">
           <FontAwesomeIcon
             icon={faHome}
