@@ -1,13 +1,17 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Link, graphql } from 'gatsby'
-import { Layout, Container, Row, Col } from '../components'
+import { Layout, Container, Row, Col, SEO } from '../components'
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
 
   return (
     <Layout>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+      />
       <div
         sx={{
           ...style.background,

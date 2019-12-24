@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Dan Spratling's Blog Site`,
+    title: `Dan Spratling's Blog`,
     author: `Dan Spratling`,
-    description: `A blog from the mind of Dan`,
+    description: `Learn new frontend JAMstack techniques using JavaScript & Gatsby`,
     siteUrl: `https://danspratling.com`,
     social: {
-      twitter: `spratters53`,
-      github: `danspratling`,
+      twitter: `https://twitter.com/dan_spratling`,
+      github: `https://github.com/danspratling`,
     },
   },
   plugins: [

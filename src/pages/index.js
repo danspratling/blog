@@ -1,20 +1,14 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
-import { Layout, Hero, Container, Row, Col, Post } from '../components'
+import { Layout, Hero, Container, Row, Col, Post, SEO } from '../components'
 
 const BlogList = ({ data }) => {
   return (
-    <Layout
-    // location={this.props.location}
-    // title={data.site.siteMetadata.title}
-    >
-      {/* <SEO title="All posts" /> */}
-      <Hero></Hero>
+    <Layout>
+      <SEO title="All blog posts" />
+      <Hero />
 
-      {/**
-        TODO: add page transitions for when a user opens a blog post. Should almost feel like a modal.
-        */}
       <Container>
         <Row sx={style.postList.row}>
           {data.allMarkdownRemark.edges.map(({ node }, index) => (
