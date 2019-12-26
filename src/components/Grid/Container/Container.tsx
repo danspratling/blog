@@ -1,7 +1,13 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-const Container = ({ sx, className, children }) => {
+interface propTypes {
+  sx?: {}
+  className?: string
+  children: any
+}
+
+const Container = ({ sx, className, children }: propTypes) => {
   return (
     <div
       className={className}

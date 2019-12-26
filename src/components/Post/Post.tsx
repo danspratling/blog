@@ -2,7 +2,21 @@
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
 
-const Post = ({ node }) => {
+interface propTypes {
+  node: {
+    excerpt: string
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      date: string
+      title: string
+      description: string
+    }
+  }
+}
+
+const Post = ({ node }: propTypes) => {
   return (
     <article key={node.fields.slug} sx={style.article}>
       <Link to={node.fields.slug} sx={style.link}>

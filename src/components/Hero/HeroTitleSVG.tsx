@@ -1,6 +1,11 @@
 import React from 'react'
 
-const HeroTitleSVG = ({ className }) => (
+interface propTypes {
+  sx?: {}
+  className?: string
+}
+
+const HeroTitleSVG = ({ sx, className }: propTypes) => (
   <svg
     id="logo"
     width="487"
