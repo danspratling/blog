@@ -1,6 +1,6 @@
 ---
 title: Converting your site to TypeScript
-date: 2019-12-25T21:12:39.887Z
+date: 2019-12-27T10:15:00.000Z
 description: >-
   Guarantee your data props are correct by converting your React site to
   TypeScript
