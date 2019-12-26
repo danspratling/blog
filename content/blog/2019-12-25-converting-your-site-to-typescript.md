@@ -23,39 +23,39 @@ It depends on your setup but the general process is pretty straightforward. The 
 
 For react apps (or any Javascript app) all you really need to do is run the following.
 
-\`\``sh
+```sh
 
 yarn add typescript @types/node @types/react @types/react-dom @types/jest
 
-\`\``
+```
 
 For a Gatsby project [you'll need to add the Typescript plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/), and the react type definitions using the following.
 
-\`\``sh
+```sh
 
 yarn add gatsby-plugin-typescript @types/react @types/react-dom @types/node
 
-\`\``
+```
 
-Then in your \`gatsby-node.js\` file add 
+Then in your `gatsby-node.js` file add 
 
-\`\``js
+```js
 
 module.exports = {
 
   plugins: [
 
-\    ...,
+    ...,
 
-\    \`gatsby-plugin-typescript\`,
+    `gatsby-plugin-typescript`,
 
   ],
 
 }
 
-\`\``
+```
 
- Then it's just a case of converting your file types to \`.ts\` and/or \`.tsx\`(Typescript is stricter than Javascript when it comes to file names so if your file includes any jsx, it requires your file extension to be a \`.tsx\` file). Note that you only need to convert your components. It's perfectly valid to continue working with some \`.js\` files for your config options if you wish.
+ Then it's just a case of converting your file types to `.ts` and/or `.tsx`(Typescript is stricter than Javascript when it comes to file names so if your file includes any jsx, it requires your file extension to be a `.tsx` file). Note that you only need to convert your components. It's perfectly valid to continue working with some `.js` files for your config options if you wish.
 
 ## Converting my blog
 
