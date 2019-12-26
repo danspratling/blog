@@ -6,11 +6,9 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { DarkButton } from '.'
 
 const Header = () => {
-  const path = typeof window !== undefined ? window.location.pathname : ''
-
   return (
     <header>
-      {path && path !== '/' ? (
+      {typeof window !== 'undefined' && window.location.pathname !== '/' ? (
         <Link to="/">
           <FontAwesomeIcon icon={faHome} sx={style.icon} />
         </Link>
