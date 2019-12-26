@@ -1,7 +1,13 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-const Row = ({ className, children }) => {
+interface propTypes {
+  sx?: {}
+  className?: string
+  children: any
+}
+
+const Row = ({ sx, className, children }: propTypes) => {
   return (
     <div className={className} sx={style.row}>
       {children}

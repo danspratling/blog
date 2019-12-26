@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Link, graphql } from 'gatsby'
-import { Layout, Container, Row, Col, SEO } from '../components'
+import { Layout, SEO } from '../components'
+import { Container, Row, Col } from '../components/Grid'
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -30,48 +31,9 @@ const BlogPost = ({ data, pageContext }) => {
           </Col>
         </Row>
       </Container>
-      {/* <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      /> */}
-      {/* <article></article>
-
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav> */}
     </Layout>
   )
 }
-// class BlogPostTemplate extends React.Component {
-//   render() {
-//     const post = this.props.data.markdownRemark
-//     const siteTitle = this.props.data.site.siteMetadata.title
-//     // const { previous, next } = this.props.pageContext
-//   }
-// }
 
 export default BlogPost
 

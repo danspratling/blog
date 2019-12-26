@@ -1,10 +1,14 @@
 /** @jsx jsx */
 import { jsx, useThemeUI } from 'theme-ui'
 import { keyframes } from '@emotion/core'
-import { Container, Row, Col } from '..'
+import { Container, Row, Col } from '../Grid'
 import { HeroTitleSVG } from '.'
 
-const Hero = ({ children }) => {
+interface propTypes {
+  children?: any
+}
+
+const Hero = ({ children }: propTypes) => {
   const { theme } = useThemeUI()
   const style = useStyle(theme)
 

@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
-import { Layout, Hero, Container, Row, Col, Post, SEO } from '../components'
+import { Layout, Hero, Post, SEO } from '../components'
+import { Container, Row, Col } from '../components/Grid'
 
 const BlogList = ({ data }) => {
   return (
