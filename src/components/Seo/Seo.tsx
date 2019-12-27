@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import socialImage from '../../../static/social-media-image.jpg'
+import socialImage from '../../images/social-media-image.jpg'
 
 interface propTypes {
   title: string
