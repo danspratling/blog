@@ -25,6 +25,7 @@ const SEO = ({ title, description, meta }: propTypes) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const origin = typeof window !== 'undefined' ? window.location.origin : ''
 
   return (
     <Helmet
@@ -52,12 +53,11 @@ const SEO = ({ title, description, meta }: propTypes) => {
         },
         {
           property: `og:url`,
-          content:
-            typeof window !== 'undefined' ? window.location.hostname : '',
+          content: origin,
         },
         {
           property: `og:image`,
-          content: socialImage,
+          content: `${origin}${socialImage}`,
         },
         {
           name: `twitter:card`,
@@ -77,7 +77,7 @@ const SEO = ({ title, description, meta }: propTypes) => {
         },
         {
           name: `twitter:image`,
-          content: socialImage,
+          content: `${origin}${socialImage}`,
         },
       ].concat(meta)}
     />
