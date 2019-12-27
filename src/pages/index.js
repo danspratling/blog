@@ -7,7 +7,7 @@ import { Container, Row, Col } from '../components/Grid'
 const BlogList = ({ data }) => {
   return (
     <Layout>
-      <SEO title="All blog posts" />
+      <SEO title="A Frontend Developer blog by Dan Spratling" />
       <Hero />
 
       <Container>

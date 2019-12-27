@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import socialImage from '../../../static/social-media-image.jpg'
 
 interface propTypes {
   title: string
@@ -50,6 +51,15 @@ const SEO = ({ title, description, meta }: propTypes) => {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content:
+            typeof window !== 'undefined' ? window.location.hostname : '',
+        },
+        {
+          property: `og:image`,
+          content: socialImage,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -64,6 +74,10 @@ const SEO = ({ title, description, meta }: propTypes) => {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: socialImage,
         },
       ].concat(meta)}
     />
