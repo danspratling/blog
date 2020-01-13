@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post renders correctly 1`] = `
+<article
+  className="css-105sco2-Post"
+>
+  <a
+    className="css-1ram7fh-Post"
+    href="http://example.com"
+  >
+    <h3
+      className="css-tsb5c-Post"
+    >
+      the title
+    </h3>
+    <small>
+      22/06/1994
+    </small>
+    <p
+      className="css-yl6mxk-Post"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "the description",
+        }
+      }
+    />
+  </a>
+</article>
+`;
