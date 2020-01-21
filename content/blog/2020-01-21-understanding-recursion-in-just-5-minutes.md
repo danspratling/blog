@@ -1,6 +1,6 @@
 ---
 title: Understanding Recursion - in just 5 minutes
-date: 2020-01-21T08:20:04.355Z
+date: 2020-01-21T14:22:44.633Z
 description: >-
   Recursive functions sound scary, but with a little breakdown you'll be using
   them in no time.
@@ -42,7 +42,7 @@ This code works, so feel free to copy and paste it into your browser inspector a
 
 So what's really happening here?
 
-If we were to call the above function with the value "20", we would see the following result, which i've broken down using pseudo code.
+If we were to call the above function with the value "20", we would see the following result (with less detail)
 
 ```js
 // 20 is doubled to 40, which is less than 100 so the function is called using 40
