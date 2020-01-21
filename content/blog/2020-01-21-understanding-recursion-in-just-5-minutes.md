@@ -42,7 +42,7 @@ This code works, so feel free to copy and paste it into your browser inspector a
 
 So what's really happening here?
 
-If we were to call the above function with the value "20", we would see the following result (with less detail)
+If we were to call the above function with the value "20", we would see the following result, which i've broken down using pseudo code.
 
 ```js
 // 20 is doubled to 40, which is less than 100 so the function is called using 40
