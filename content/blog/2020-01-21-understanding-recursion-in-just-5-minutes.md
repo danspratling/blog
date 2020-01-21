@@ -45,11 +45,11 @@ So what's really happening here?
 If we were to call the above function with the value "20", we would see the following result (with less detail)
 
 ```js
-20 is doubled to 40, which is less than 100 so the function is called using 40
-  40 is doubled to 80, which is less than 100 so the function is called using 80
-    80 is doubled to 160 which is greater than 100 so the function returns a count of 3
-  3 was returned so this function also returns 3
-3 was returned so this function also returns 3
+// 20 is doubled to 40, which is less than 100 so the function is called using 40
+  // 40 is doubled to 80, which is less than 100 so the function is called using 80
+    // 80 is doubled to 160 which is greater than 100 so the function returns a count of 3
+  // 3 was returned so this function also returns 3
+// 3 was returned so this function also returns 3
 ```
 
 Once the function reaches its passing criteria, the recursion breaks and everything continues as normal. Failing to include a pass criteria will create an infinite loop.
