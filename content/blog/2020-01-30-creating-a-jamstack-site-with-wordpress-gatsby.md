@@ -13,6 +13,6 @@ But if you don't want to use these approaches, old CMS' can still work just as w
 
 ## Installing Wordpress and setting up the Rest API
 
-
+\* make sure the permalinks are set to pretty so the json api can populate
 
 ## Installing Gatsby and sourcing data from Wordpress
