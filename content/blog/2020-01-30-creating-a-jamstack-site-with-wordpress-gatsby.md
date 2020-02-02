@@ -13,6 +13,21 @@ But if you don't want to use these approaches, old CMS' can still work just as w
 
 ## Installing Wordpress and setting up the Rest API
 
-\* make sure the permalinks are set to post name so the json api can populate
+* make sure the permalinks are set to post name so the json api can populate
+
+Wordpress Settings image
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+* make sure that https isn't required so that the gatsby plugin works correctly locally
+
+```php
+/**
+ * For developers: WordPress force SSL to login
+ *
+ * Ensure the SSL admin is not required for local environments but is enabled
+ * for staging/prod
+ */
+define( 'FORCE_SSL_ADMIN', false );/**
+```
 
 ## Installing Gatsby and sourcing data from Wordpress
