@@ -55,17 +55,10 @@ And that's all the WordPress set up we need for now.
 
 ## Installing Gatsby and sourcing data from Wordpress
 
-* make sure the permalinks are set to post name so the json api can populate
-* make sure that https isn't required so that the gatsby plugin works correctly locally
+Next we want to set up a Gatsby site. I did this in the same repo as the WordPress site so that the folder structure looks like the following. You can do this differently if you want. It doesn't really matter so long as you can run both locally at the same time.
 
-```php
-/**
- * For developers: WordPress force SSL to login
- *
- * Ensure the SSL admin is not required for local environments but is enabled
- * for staging/prod
- */
-define( 'FORCE_SSL_ADMIN', false );/**
+```sh
+└── gatsby-wordpress-site
+    ├── gatsby
+    └── wordpress
 ```
-
-## Installing Gatsby and sourcing data from Wordpress
