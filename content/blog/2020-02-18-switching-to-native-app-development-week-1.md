@@ -12,7 +12,6 @@ Note: I’m creating apps using Vue.js and NativeScript. This may not apply to e
 ## What I've learned so far.
 
 * App structure looks almost exactly the same as website structure. node_modules, package.json, webpack.config (and all the other .config files) still exist. App replaces src but contains components, pages, images, store, which you’d also find in a web app.
-![Folder structure for nativescript apps](https://danspratling.com/images/nativescript-app-file-structure.png)
 * You still have the ability to use everything you used in web development if you wanted. JavaScript frameworks and libraries, css compilers (sass, less, etc), state management tools. If you can do it on the web, you can probably do it here too.
 * Emulators are fiddly to set up (but not painstakingly so) as they require changes to your system config. Guides are really helpful.
 * Other than the visual rendering of the apps (which you can’t use browsers for, but will need to use emulators or connected apps on real devices), your code 
