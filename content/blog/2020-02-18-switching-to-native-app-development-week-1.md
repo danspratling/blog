@@ -17,7 +17,7 @@ Note: I’m creating apps using Vue.js and NativeScript. This may not apply to e
 * Other than the visual rendering of the apps (which you can’t use browsers for, but will need to use emulators or connected apps on real devices), your code 
 * Code is not written in HTML, despite looking similar. Instead it’s compiled down to XML which restricts what you’re able to use. `<div>`  doesn’t exist any more but the built in components work in a very similar to way to what you’re used to (GridLayout = css Grid). Here’s a code example which creates the image below (ignoring styling).
 
-```js
+```html
 <GridLayout rows=“auto, auto” columns=“*, auto” col=“1” row=“1” class=“status-wrapper”>
   <Label row=“0” col=“0” class=“title”>This is the title</Label>
   <Label row=“1” col=“0” class=“subtitle”>This is the description</Label>
